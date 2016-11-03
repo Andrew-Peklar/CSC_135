@@ -141,35 +141,6 @@
 
 ; Test isOdd : (functionMajority isOdd '(4 8 3 6))  --> #f
 ; Test isEven: (functionMajority isEven '(4 8 3 6)) --> #t
-;---------------------------------------------------------------------------------------------------- G
-
-;makeMangler
-
-; Helper method recurses through the list and multiplies each elemnt by an element at n index.
-(define (multElement L n)
- (define (aux L)
-    (if (null? L) '()
-        (cons (* n (car L))(aux (cdr L))))) 
-  (aux L))    
-
- ; Helper method recurses through the list and adds each elemnt by an element at n index.
-(define (addElement L n )
-  (define (aux L)
-    (if (null? L) L
-        (cons (+ n (car L))(aux (cdr L))))) 
-  (aux L))
-
-; Test w/out if statements to catch lists of a size less than 3.
-; This would be a linear solution using recursive functions...
-(define (makeMangler L)
-  (define (aux1 A)
-    (multElement A (car L)))
-  (define (aux2 B)
-    (addElement B (car (cdr L))))
-  (define (aux3 C)
-    (multElement C (car (cdr (cdr L)))))
-  (aux3 (aux2 (aux1 L))))
-
 
 
  
