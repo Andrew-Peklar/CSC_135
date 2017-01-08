@@ -21,10 +21,10 @@ breed(paul, dog).
 %	Input  :	?- dogEnthusiast(millie).
 %	Output :	false.
 %   --------    -------------------------
-%   Input  :	?- dogEnthusiast(eric).
-%   Output :    true ;
-%		true ;
-%		false.
+%   	Input  :	?- dogEnthusiast(eric).
+%  	Output :    	true ;
+%		   	true ;
+%			false.
 %%
 /*******************************************************************/
 
