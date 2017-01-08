@@ -15,16 +15,16 @@ breed(paul, dog).
 
 %%	Input  :	?- dogEnthusiast(A).
 %	Output :	A = eric ;
-%				A = eric ;
-%				false.
+%			A = eric ;
+%			false.
 %   --------    -------------------------
 %	Input  :	?- dogEnthusiast(millie).
 %	Output :	false.
 %   --------    -------------------------
 %   Input  :	?- dogEnthusiast(eric).
 %   Output :    true ;
-%				true ;
-%				false.
+%		true ;
+%		false.
 %%
 /*******************************************************************/
 
@@ -67,17 +67,17 @@ Total is L*L, Total = Answer.
 
 %%	Input  :	?- crypto(G,R,I,P,T,O,C,K).
 %	Output :	G = 8,
-%				R = C, C = 7,
-%				I = T, T = 9,
-%				P = 0,
-%				O = 3,
-%				K = 6 ;
-%				G = R, R = T, T = 0,
-%				I = 3,
-%				P = 9,
-%				O = 6,
-%				C = 2,
-%				K = 5 ;
+%			R = C, C = 7,
+%			I = T, T = 9,
+%			P = 0,
+%			O = 3,
+%			K = 6 ;
+%			G = R, R = T, T = 0,
+%			I = 3,
+%			P = 9,
+%			O = 6,
+%			C = 2,
+%			K = 5 ;
 %%	Answers:	87909376 and 00390625
 /*******************************************************************/
 
