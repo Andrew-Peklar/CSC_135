@@ -30,15 +30,11 @@ breed(paul, dog).
 
 %% Problem 2: ListPicker
 /*base case*/
-listPicker([], _, []).
-listPicker(_, [], []).
-listPicker(L, [A|I], [B|C]) :- listHelper(L, A, B), concatanate([], B, _), listPicker(L, I, C).
-listHelper([D|_], 1, D).
-listHelper([_|M],X, I) :- N is X - 1, listHelper(M, N, I).
-concatanate([], D, [D]).
-concatanate([B|C], D, [B,L]) :- concatanate(C, D, L).
-
-
+listPicker(D,[],[]).
+listPicker(D,[PA|PD],[F|R]) :- nth(PA,D,F), listPicker(D,PD,R).
+nth(1,[X|Y],X).
+nth(N,[X|Y],G) :- N>1, N1 is N-1, nth(N1,Y,G).
+  
 /********************************************************************/
 
 %% Problem 3: Crypto for GRIPLOCK = TOCK*TOCK
