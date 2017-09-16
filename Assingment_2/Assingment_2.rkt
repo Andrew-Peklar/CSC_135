@@ -3,6 +3,7 @@
 ; Assingment:   Homework Number 2
 ; Assign. Date: 02 November, 2016
 
+;add test line
 ;---------------------------------------------------------------------------------------------------- A,B
 
 ; Parts A and B: digit incrementer
@@ -14,9 +15,9 @@
 	(if (< x 10)(modulo (+ 1 x)10)
             ; recursively deconstructs the integer until the first digit is reached and increments it.
             ; That number is then multiplied by 10 and the next digit is added. Process repeats.
-            ; modulo 10 is used to keep the digit at a value {0, 1, 2,..., 9} while "round" is used in 
+            ; modulo 10 is used to keep the digit at a value {0, 1, 2,..., 9} while "round" is used in
             ; order to make lisp perform the division and return a whole number instead of leaving it as
-            ; a fraction and crashing. 
+            ; a fraction and crashing.
             (+ (* 10 (digitinc (round (/ x 10))))(modulo (+ 1 x)10))))
 
 ; Test Case: (digitinc 1234) --> 2345
@@ -57,20 +58,20 @@
   (inner L '()))
 
 ; The main "neshted" method takes in list parameter, surrounds the leftmost and rightmost elements
-; in parens, and then repeats the process inward until "neshted". 
+; in parens, and then repeats the process inward until "neshted".
 (define (neshtlist L)
   (define (aux L R n)
     (cond ((= n 0) '())
           ; If zero, return nothing
-          ; If one , list the first element 
+          ; If one , list the first element
           ((= n 1) (list (car L)))
           ; Otherwise return the list
           ; Note parameter n is decresed by 2 at each recursion to allow for both the even & odd cases.
-          (else (list (car L) (aux (cdr L) (cdr R) (- n 2)) (car R))))) 
+          (else (list (car L) (aux (cdr L) (cdr R) (- n 2)) (car R)))))
   (aux L (reverseList L) (listSize L)))
 
 ; Test case even: (neshtlist '(1 2 3 4))   --> (1 (2 () 3) 4)
-; Test case Odd : (neshtlist '(1 2 3 4 5)) --> (1 (2 (3) 4) 5) 
+; Test case Odd : (neshtlist '(1 2 3 4 5)) --> (1 (2 (3) 4) 5)
 ;---------------------------------------------------------------------------------------------------- E
 
 ; Part E: repChildren.
@@ -82,14 +83,14 @@
 ;     \\\Y///
 ;     \\\|///                     The repchildren method takes searches for the
 ;    \\\\Y////                    key value in the tree and replaces the associated
-;    \\\\|////                    branch with a new one. The Helper method insertNew 
-;     `\\Y//`                     constructs the replacment branch to be inserted while 
-;       `#`                       the main traverses the list recursively and searches for 
+;    \\\\|////                    branch with a new one. The Helper method insertNew
+;     `\\Y//`                     constructs the replacment branch to be inserted while
+;       `#`                       the main traverses the list recursively and searches for
 ;      __#__                      the key value.
 
 
 ; Helper method that constructs the replacement.
-; Method is really just here for clarity and sanity. 
+; Method is really just here for clarity and sanity.
 (define (insertNew K L R)
   (list K (list L () ()) (list R () ())))
 
@@ -141,5 +142,3 @@
 
 ; Test isOdd : (functionMajority isOdd '(4 8 3 6))  --> #f
 ; Test isEven: (functionMajority isEven '(4 8 3 6)) --> #t
-
- 
