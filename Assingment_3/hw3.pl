@@ -15,6 +15,8 @@ breed(raj, dog).
 breed(chester, dog).
 breed(paul, dog).
 
+
+
 %%	Input  :	?- dogEnthusiast(A).
 %	Output :	A = eric ;
 %			A = eric ;
