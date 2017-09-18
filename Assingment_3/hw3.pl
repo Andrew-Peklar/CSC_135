@@ -3,6 +3,8 @@
  * Title :  Homework Assingment 3
  */
 
+ /*Adding line to test atom*/
+
 %% Problem 1: dogEnthusiest
 /* Someone is a "dogEnthusiast" if they own AT LEAST TWO dogs --> A\=M */
 dogEnthusiast(X) :- owner(X,A), owner(X,M), breed(A,dog), breed(M,dog), A\=M.
@@ -34,7 +36,7 @@ listPicker(D,[],[]).
 listPicker(D,[PA|PD],[F|R]) :- nth(PA,D,F), listPicker(D,PD,R).
 nth(1,[X|Y],X).
 nth(N,[X|Y],G) :- N>1, N1 is N-1, nth(N1,Y,G).
-  
+
 /********************************************************************/
 
 %% Problem 3: Crypto for GRIPLOCK = TOCK*TOCK
